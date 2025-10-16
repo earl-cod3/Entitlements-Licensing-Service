@@ -1,0 +1,52 @@
+{
+  "name": "nextjs-argon-dashboard",
+  "version": "1.1.0",
+  "author": "Creative Tim",
+  "license": "MIT",
+  "homepage": "https://demos.creative-tim.com/nextjs-argon-dashboard/",
+  "description": "NextJS version of Argon Dashboard React by Creative Tim",
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/nextjs-argon-dashboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/nextjs-argon-dashboard.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rimraf .next && rimraf out && rimraf node_modules/.cache || true",
+    "install:clean": "npm run clean && rimraf node_modules && rimraf package-lock.json && npm install && npm run dev",
+    "compile:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js assets/scss/nextjs-argon-dashboard.scss assets/css/nextjs-argon-dashboard.css",
+    "minify:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js assets/scss/nextjs-argon-dashboard.scss assets/css/nextjs-argon-dashboard.min.css --output-style compressed",
+    "map:scss": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js assets/scss/nextjs-argon-dashboard.scss assets/css/nextjs-argon-dashboard.css --source-map true",
+    "build:scss": "npm run compile:scss && npm run minify:scss && npm run map:scss"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.15.2",
+    "@tanstack/react-query": "^4.41.0",
+    "axios": "^1.12.2",
+    "bootstrap": "4.6.0",
+    "chart.js": "2.9.4",
+    "classnames": "2.2.6",
+    "moment": "^2.30.1",
+    "next": "^12.3.4",
+    "node-sass-package-importer": "5.3.2",
+    "nouislider": "14.6.3",
+    "path": "0.12.7",
+    "react": "^17.0.2",
+    "react-chartjs-2": "2.11.1",
+    "react-copy-to-clipboard": "5.0.3",
+    "react-datetime": "^3.2.0",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.65.0",
+    "reactstrap": "8.9.0",
+    "webpack": "4.44.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "sass": "^1.93.2"
+  }
+}

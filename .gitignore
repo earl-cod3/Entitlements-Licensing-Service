@@ -1,0 +1,8 @@
+/build
+/node_modules
+package-lock.json
+/build
+/.next
+.env.local
+.env
+entitlements-api/
